@@ -1,0 +1,39 @@
+
+float rand = 0;
+  Float a = 0.0;
+  float inc = TWO_PI/10.0;
+String gridName = "Joey";
+void setup() {
+  size(1000, 1000);
+  background(100);
+  colorMode(RGB);
+  smooth();
+  noStroke();
+  frameRate(10);
+  for (int i=0; i < width; i+=20) {
+  fill(random(255), random(255), random(255));
+  rect(0, i, width, 10);
+  fill(random(255), random(255), random(255));
+  rect(i, 0, 10, height);}
+  stroke(random(255),random(255),random(255));
+}
+void draw() {
+  stroke(255);
+  for (int i = 0; i < 200; i += 20) {
+    
+
+ 
+        
+          for (; i<1000; i+=5) {
+    line(i, 500, i, 400+sin(a)*100.0);
+    line(i+10, 500, i+10, 600+-sin(a)*100.0);
+    println(" The angle = " + a + "The sin = " + sin(a));
+    a = a + inc;
+    
+          if (i<3) {
+          fill(0,0, random(255));
+       quad(0, 300, 1000, 300, 1000, 700, 0, 700);
+    }
+  }
+  }
+}

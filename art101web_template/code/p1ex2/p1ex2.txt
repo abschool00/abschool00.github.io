@@ -1,0 +1,194 @@
+int value = 0;
+int gSize = 50;
+int tCounter = 0;
+PFont f;
+PImage b;
+void setup() {
+  size(1000, 1000);
+  rectMode(CENTER);
+  noStroke();
+  frameRate(20);
+  
+    b = loadImage("537b65d3b70ee8a0092bbd81b9448844.jpg"); 
+  image(b, 0, 0, width, height);
+  
+   printArray(PFont.list());
+  //load font
+  f = createFont("Georgia", 24);
+  //set the font for drawing
+  textFont(f);
+  // set color of text
+  fill(random(255), random(255), random(255));
+  //draw out text
+  text("Dodecahedron", 100, 100);
+}
+void draw() {
+  fill(value);
+  rect(200, 200, 50, 50);
+  
+    background(255); 
+  fill(value); 
+  ellipse(width/2, height/2, 100, 100);
+  
+  
+    if (!mousePressed) {
+    noTint();
+    image(b, 0, 0, width/3, height/3);
+
+  } else {
+
+    //int checkCounter = 0; 
+    for ( int i = 0; i < height; i += gSize ) {
+    fill(mouseX, mouseY, 100, 100);
+    rect(value, height/2, 20, height);
+    image(b, mouseX + 1, mouseY + 1);
+    }
+      value++;
+  
+  if ( value > 255) {
+    value = 0;
+  }
+  
+  fill(random(255), random(255), random(255));
+  rect(mouseX, height/2, mouseY/2+10, mouseY/2+10);
+  fill(value, 204);
+}
+ fill(0, 255, 0);
+  text("Dodecahedron", tCounter, 100);
+  
+  // this is an example of 'and' logic
+  if ( mousePressed && keyPressed == true )  {
+    fill(255, 0, 0);
+    text("Rectangular Prism ", 100, tCounter);
+    
+  }
+  
+  tCounter ++;
+  if (tCounter > width) {
+    tCounter = -50;}
+    
+    fill(20, 10);
+  rect(0, 0, width, height);
+  AndrewsRanDots();
+  
+  
+    fill(50, 30);
+  rect(0, 0, width, height);
+  textAlign(CENTER);
+  myDrawType("O", mouseX,mouseX);
+  textAlign(CENTER);
+  myDrawType("O", mouseY, mouseY);
+  
+    textAlign(CENTER);
+  myDrawType("O", mouseX,500);
+  textAlign(CENTER);
+  myDrawType("O", 500, mouseY);
+
+  
+ 
+  abSign1("<- Atom", 750,500);
+      
+      abSign2("Atom ->",250,500);
+      
+      abnucleus(500,500); 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+void mouseMoved() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
+  }
+  void keyPressed() { 
+
+  if ( key == 'b' || key == 'B' ) { 
+    // example of toggle logic 
+    if (value == 0) { 
+      value = 255;
+    } else { 
+      value = 0;
+    }
+}
+  }
+  void AndrewsRanDots() {
+  float r = random(20);
+  float rloop = random(50);
+  for (int i = 0; i < r; i++) {
+    //fill(r+150, rloop+10, random(255));
+    fill(0,rloop+5,random(255));
+    ellipse(random(width), random(height), r+10, r+10);
+  }
+}
+  void myDrawType(String s, int x, int y ) {
+  fill(255, 255, 50);
+  text(s, x, y);
+  //fill(200);
+  //rect(x, y, 5, 5);
+}
+void abnucleus(int locx, int loy) {
+  stroke(20);
+  fill(255);
+  ellipse(locx+10, loy+10,30,30);
+    fill(255,0,0);
+  ellipse(locx, loy-10,30,30);
+    fill(255);
+  ellipse(locx+7, loy-5,30,30);
+    fill(255,0,0);
+  ellipse(locx-10, loy+10,30,30);
+    fill(255);
+  ellipse(locx+10, loy-10,30,30);
+    fill(255,0,0);
+  ellipse(locx-10, loy+10,30,30);
+  
+  
+}
+
+     void abSign1(String ss , int locx, int loy) {
+       //fill(120,50);
+       //rect(locx,loy,300,50);
+       //fill(34);
+       //rect(locx-10,loy-10,300,50);
+       
+         fill(20,50);
+       rect(locx-75,loy-10,170,50);
+       fill(100);
+       rect(locx-85,loy-20,170,50);
+       color k = color(220);
+       abDrawText(ss,locx+5,loy+20,k);
+       //abRanGrcs(locx,loy,color(200,255,0,30));
+     }
+     
+     
+     void abSign2(String ss,int locx, int loy) {
+       fill(20,50);
+       rect(locx-75,loy-10,170,50);
+       fill(100);
+       rect(locx-85,loy-20,170,50);
+       color k = color(220);
+       abDrawText(ss,locx+5,loy+20,k);
+       //abRanGrcs(locx+300,loy,color(255,0,0,30));
+     }
+      void abDrawText(String s, int lx, int ly, color c ) {
+      fill(c);
+      text(s, lx, ly,20);
+    }
+    
+    void abRanGrcs(int lx, int ly, color c) {
+      fill(c);
+      float r = random(50); 
+      
+      for (int i= 0; i < 30; i++) {
+        ellipse(lx-r,ly-r,10,10);
+      }
+       
+    }
+    

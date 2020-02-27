@@ -1,0 +1,135 @@
+char currentkey = '1';
+
+color bgc = color(255);
+
+void setup() {
+
+size(800, 800);
+background(255);
+smooth();
+ frameRate(30);
+}
+
+void draw() {
+
+
+if(keyPressed) {
+abLandscape(); 
+abBackgroundChange();
+}
+
+if(mousePressed) {
+  drawChoice(); 
+ 
+}
+}
+
+
+void drawChoice() {
+
+ char currentkey = key;
+   
+switch(currentkey) {
+case '1': 
+  println("SmlBlkLn");  
+  drawline(color(0), mouseX, mouseY, pmouseX, pmouseY); 
+  break;
+case '2': 
+  println("SmlBrnLn"); 
+  drawline(color(74,31,8), mouseX, mouseY, pmouseX, pmouseY);
+  break;
+case '3': 
+  println("FatLightBrnLn");  
+  drawFatLine(color(138,85,56), mouseX, mouseY, pmouseX, pmouseY);
+  break;
+case '4': 
+  println("FatDarkBrnLn");  
+  drawFatLine(color(59,38,23), mouseX, mouseY, pmouseX, pmouseY);
+  break;
+case '5': 
+  println("LeafTexture");  
+  abLeaf(bgc,mouseX, mouseY,25);
+  break;
+  case '6': 
+   println("Eraser");  
+  eraser(bgc,mouseX, mouseY,25);
+  break;
+   case '7': 
+ println("ClrScrn");  
+  abEraseAll(bgc,mouseX, mouseY,25);
+  break;
+default:             // Default executes if the case labels
+  println("None");   // don't match the switch parameter
+  break;   
+}
+  
+}
+
+void drawline(color k, int lx,int ly, int px,int py) {
+ // strokeWeight(1);
+  stroke(k);
+  line(lx, ly, px, py); 
+}
+
+void drawFatLine(color k, int lx,int ly, int px,int py) {
+  strokeWeight(10);
+  stroke(k);
+  line(lx, ly, px, py); 
+}
+
+
+void eraser(color k,int lx,int ly,int sz) {
+  //stroke(k);
+  fill(255);
+  ellipse(lx, ly, sz,sz); 
+}
+
+void abEraseAll(color k,int lx,int ly,int sz) {
+  //stroke(k);
+  fill(255);
+  ellipse(lx, ly, sz+2000,sz+2000); 
+}
+
+
+void abLeaf(color k,int lx,int ly,int sz) {
+  
+  fill(0,random(255),0);
+  ellipse(lx, ly, random(width/12),random(height/12)); 
+}
+
+
+void abLandscape() {
+noStroke();
+  if (key == 'q' || key == 'Q') {
+     fill(0,random(255),0);
+     ellipse(400,800,1200,150);
+  } else if (key == 'w' || key == 'W') {
+     fill(0,random(255),0);
+     ellipse(200,800,600,300);
+     ellipse(600,800,600,200);
+  }
+  else if (key == 'e' || key == 'E') {
+     fill(0,random(255),0);
+     ellipse(200,800,600,300);
+     fill(0,random(255),0);
+     ellipse(600,800,600,200);
+  }
+    else if (key == 'r' || key == 'R') {
+     fill(0,random(255),0);
+     ellipse(250,800,1300,350);
+     fill(230, 226, 41);
+     ellipse(700,100,150,150);
+
+    }
+    }
+
+
+void abBackgroundChange() {
+  if (key == 'b' || key == 'B'){
+  background(0,0,random(255));
+  }
+  else{
+    println("noBackground");
+  
+  }
+}

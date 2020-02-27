@@ -1,0 +1,137 @@
+ float z = 0;
+ArrayList ABfractals;
+float increment = 0.01;
+// The noise function's 3rd argument, a global variable that increments once per cycle
+float zoff = 0.0;  
+// We will increment zoff differently than xoff and yoff
+float zincrement = 0.02; 
+int timer;
+float counter = 0.0;
+float speed = 10;
+
+void setup() {
+  size(1920,1080,P3D);
+  frameRate(30);
+   noStroke();
+    ABfractals = new ArrayList();
+  ABfractals.add(new ABFractal(250, 100, random(20, 70), 1.1));
+}
+
+void draw() {
+  println(frameRate);
+  
+  // Optional: adjust noise detail here
+   noiseDetail(8,0.65f);
+  
+  loadPixels();
+
+  float xoff = 0.0; // Start xoff at 0
+  
+  // For every x,y coordinate in a 2D space, calculate a noise value and produce a brightness value
+  for (int x = 0; x < width; x++) {
+    xoff += increment;   // Increment xoff 
+    float yoff = 0.0;   // For every xoff, start yoff at 0
+    for (int y = 0; y < height; y++) {
+      yoff += increment; // Increment yoff
+      
+      // Calculate noise and scale by 255
+      float bright = noise(xoff,yoff,zoff)*255;
+
+      // Try using this line instead
+     // float bright = random(0,255);
+      
+      // Set each pixel onscreen to a grayscale value
+       if (millis() >= 0) {
+      pixels[x+y*width] = color(random(255),bright,bright);
+       }
+            if (millis() >= 10000) {
+      pixels[x+y*width] = color(bright,random(255),bright);
+       }
+            if (millis() >= 20000) {
+      pixels[x+y*width] = color(bright,bright,random(100));
+       }
+    }
+  }
+  updatePixels();
+  
+  zoff += zincrement; // Increment zoff
+       z = constrain(z, 0, 500);
+  translate(width/2, height/2, z);
+  float camy = map(radians(millis()/2), 0, 14, 0, TWO_PI);
+  float camx = map(radians(millis()/2), 0, 14, 0, TWO_PI);
+
+  rotateX(camx*2);
+  rotateY(camy);
+  background(0, 0, 25);
+  if (millis() >= 0) {
+  stroke(106, 166, 244, 155);
+  }
+  if (millis() >= 10000) {
+  stroke(17, 166, 25, 155);
+  }
+  if (millis() >= 20000) {
+  stroke(214, 199, 68, 155);
+  }
+  for (int i=ABfractals.size()-1; i>=0; i--){
+    ABFractal ABfractal = (ABFractal) ABfractals.get(i);
+    ABfractal.draw();
+    
+  }
+   {
+  saveFrame("Frames/####.png");
+  }
+}
+  
+  class ABFractal{
+  float b;
+  float g;
+  float r;
+  float fac;
+
+  ABFractal(float ib, float ig, float ir, float ifac){
+    b = ib;
+    g = ig;
+    r = ir;
+    fac = ifac;
+  }
+
+  void draw(){
+    //line(0, 0, 0, 60);
+    translate(PI,PI,PI);
+    branch(b, g, r, fac); 
+  }
+
+  void branch(float b, float g, float r, float fac){
+    b*=0.8;
+    r*=fac;
+    if (b > g){
+      pushMatrix();
+      rotateX(r);
+      line(0, 0, 0, -b);
+      translate(0, -b);
+      branch(b, g, r, fac);
+      popMatrix();
+
+      pushMatrix();
+      rotateX(-r);
+      line(0, 0, 0, -b);
+      translate(0, -b);
+      branch(b, g, r, fac);
+      popMatrix();
+
+      pushMatrix();
+      rotateZ(r);
+      line(0, 0, 0, -b);
+      translate(0, -b);
+      branch(b, g, r, fac);
+      popMatrix();
+
+      pushMatrix();
+      rotateZ(-r);
+      line(0, 0, 0, -b);
+      translate(0, -b);
+      branch(b, g, r, fac);
+      popMatrix();
+    }
+  }
+}

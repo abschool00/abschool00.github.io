@@ -1,0 +1,71 @@
+int count = 1500;
+int r = 1;
+int i = 1;
+float[] posX = new float[count]; 
+float[] posY = new float[count];
+float[] speedX = new float[count];
+float[] speedY = new float[count];
+float[] sizeW = new float[count];
+float[] sizeH = new float[count];
+int[] colors = new int[count];
+
+void setup() { 
+  size(1000, 1000);
+  colorMode(HSB);
+  for (int i=0; i < posX.length; i++) { 
+    posX[i] = width/2; 
+    posY[i] = height/2; 
+    speedX[i] = random(-5, 5); 
+    speedY[i] = random(-5, 5); 
+    sizeW[i] = random(40, 55); 
+    sizeH[i] = random(40, 120); 
+    fill(random(255),40,40);
+    //colors[i] = int(random(0, 255));
+  }
+   for (int r=0; r < posX.length; r++) { 
+    posX[r] = width/3; 
+    posY[r] = height/3; 
+    speedX[r] = random(-10, 10); 
+    speedY[r] = random(-10, 10); 
+    sizeW[r] = random(40, 55); 
+    sizeH[r] = random(40, 120); 
+    colors[r] = int(random(0, 255));
+  }
+} 
+void draw() { 
+  background(0); 
+  fill(0); 
+  rect(0, 0, width, height); 
+  for (int i = 0; i < posX.length; i++) { 
+    //update all positions 
+    posX[i] += speedX[i]; 
+    posY[i] += speedY[i]; 
+    //draw all balls 
+    fill(random(255),40,40);
+    ellipse(posX[i], posY[i], sizeW[i], sizeW[i]); 
+    //check boundaries for all balls 
+
+    if (posX[i] < 30+sizeW[i]/2 || posX[i] > (width-40)-sizeW[i]/2 ) { 
+      speedX[i] = -speedX[i];
+    } 
+    if (posY[i] < 30+sizeW[i]/2 || posY[i] > (height-40)-sizeW[i]/2) { 
+      speedY[i] = -speedY[i];
+    }
+  }
+  for (int r = 0; r < posX.length; r++) { 
+    //update all positions 
+    posX[r] += speedX[r]; 
+    posY[r] += speedY[r]; 
+    //draw all balls 
+    fill(random(255),100,100); 
+    ellipse(posX[r], posY[r], sizeW[r], sizeW[r]); 
+    //check boundaries for all balls 
+
+    if (posX[r] < 40+sizeW[r]/2 || posX[r] > (width-40)-sizeW[r]/2 ) { 
+      speedX[r] = -speedX[r];
+    } 
+    if (posY[r] < 40+sizeW[r]/2 || posY[r] > (height-40)-sizeW[r]/2) { 
+      speedY[r] = -speedY[r];
+    }
+  }
+} 
