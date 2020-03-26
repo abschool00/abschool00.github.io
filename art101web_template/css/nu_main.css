@@ -43,7 +43,7 @@ h3 {
 }
 
 p {
-    color: #d0d0d0;
+    color: #fff;
 }
 
 
@@ -126,7 +126,7 @@ code{
 .container {
     width: 1200px;
     margin: 0 auto;
-    background-color: #4a566b;
+    background-color:#4a566b;
     box-sizing: border-box;
     padding: 0 40px;
 }
