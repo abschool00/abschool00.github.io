@@ -24,7 +24,7 @@ function preload() {
     img4 = loadImage('assets/Scene3.png');
     img5 = loadImage('assets/Scene4.png');
     img6 = loadImage('assets/EndScene.png');
-    img7 = loadImage('assets/HelpScene.png');
+    img7 = loadImage('assets/Quarantine_Run_Help_Screen.png');
     img8 = loadImage('assets/Scene1_1.png');
     img9 = loadImage('assets/Scene2_1.png');
     img10 = loadImage('assets/Scene3_1.png');
@@ -54,7 +54,7 @@ function setup() {
     // Preload scenes. Preloading is normally optional
     // ... but needed if showNextScene() is used.
     mgr.addScene (scene_start);
-    mgr.addScene (scene_lvl1);
+   // mgr.addScene (scene_lvl1);
     mgr.addScene (scene_lvl1_1);
     mgr.addScene (scene_lvl2);
     mgr.addScene (scene_lvl2_1);
