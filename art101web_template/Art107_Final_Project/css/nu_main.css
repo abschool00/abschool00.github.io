@@ -9,32 +9,32 @@
 
 
 body{
-    background: #555;
+    background: #b1bbcc;
    /* color:#aaa;*/
-    color:#d6d6d6;
+    color:#b1bbcc;
     
 }
 
 a:link {
-    color: #303030;
+    color: #fff;
     text-decoration: none;
 }
 
 a:visited {
     text-decoration: none;
-    color: #303030;
+    color: #fff;
 }
 a:hover {
     text-decoration: none;
-    color: #a3a3a3;
+    color: #b1bbcc;
 }
 a:active {
     text-decoration: none;
-    color: #303030;
+    color: #fff;
 }
 
 td, th {
-    color: #303030;
+    color: #fff;
 }
 
 h3 {
@@ -43,7 +43,7 @@ h3 {
 }
 
 p {
-    color: #d0d0d0;
+    color: #fff;
 }
 
 
@@ -86,7 +86,7 @@ p {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222;
+    color: #fff;
 }
 .post.date{
     padding:30px 0;
@@ -107,7 +107,7 @@ code{
 
 @media (min-width: 750px) {
     .seven.columns{
-        border-right:1px solid #d8d8d8;
+        border-right:1px solid #fff;
         padding-right:30px;
     }
 }
@@ -126,7 +126,7 @@ code{
 .container {
     width: 1200px;
     margin: 0 auto;
-    background-color: #668;
+    background-color:#4a566b;
     box-sizing: border-box;
     padding: 0 40px;
 }
