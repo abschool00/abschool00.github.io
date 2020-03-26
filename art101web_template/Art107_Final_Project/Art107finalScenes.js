@@ -53,7 +53,7 @@ function scene_start()  {
          {
 	
             
-      mgr.showScene( scene_lvl1 );
+   //   mgr.showScene( scene_lvl1 );
   }   
       
      

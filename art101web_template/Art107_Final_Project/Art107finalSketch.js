@@ -54,7 +54,7 @@ function setup() {
     // Preload scenes. Preloading is normally optional
     // ... but needed if showNextScene() is used.
     mgr.addScene (scene_start);
-   // mgr.addScene (scene_lvl1);
+    mgr.addScene (scene_lvl1);
     mgr.addScene (scene_lvl1_1);
     mgr.addScene (scene_lvl2);
     mgr.addScene (scene_lvl2_1);
