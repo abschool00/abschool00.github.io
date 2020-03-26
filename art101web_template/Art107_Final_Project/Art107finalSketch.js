@@ -18,7 +18,7 @@ function preload() {
     
     
     
-    img1 = loadImage('assets/StartScene.png');
+    img1 = loadImage('assets/Quarantine_Run_Title_Screen.png');
     img2 = loadImage('assets/Scene1.png');
     img3 = loadImage('assets/Scene2.png');
     img4 = loadImage('assets/Scene3.png');
