@@ -9,32 +9,32 @@
 
 
 body{
-    background: #555;
+    background: #b1bbcc;
    /* color:#aaa;*/
-    color:#d6d6d6;
+    color:#b1bbcc;
     
 }
 
 a:link {
-    color: #303030;
+    color: #fff;
     text-decoration: none;
 }
 
 a:visited {
     text-decoration: none;
-    color: #303030;
+    color: #fff;
 }
 a:hover {
     text-decoration: none;
-    color: #a3a3a3;
+    color: #b1bbcc;
 }
 a:active {
     text-decoration: none;
-    color: #303030;
+    color: #fff;
 }
 
 td, th {
-    color: #303030;
+    color: #fff;
 }
 
 h3 {
