@@ -1,48 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <title>Name goes here | Home</title>
-  <script src="three.min.js"></script>
-  <script src="vanta.cells.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-     data-auto-a11y="true"></script>
+
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>art101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT ––––––––––––––––––––––––––––––––––––––––------–––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+  <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>   
+    <script src="three.r95.min.js"></script>
+<script src="vanta.waves.min.js"></script>
+    <script type="text/javascript" src="css/overlaypopup.js"> </script>  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/overlaypopup.css" />
+  <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="css/nu_main.css">
+
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <!--  <link rel="icon" type="image/png" href="images/favicon.png"> -->
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 </head>
-
 <body>
-  <div id="interactive"></div>
 
+<nav class="navbar">
+      <div class="container nav_pad">  
+        <ul>
+           
+        <li><a class="navbar-link" href="../index.html">Main</a></li>
+             
+         <li><a class="navbar-link" href="p1.html"> Project 1</a></li>
+   
+        </ul>
+      </div>     
+</nav>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <h1>NAME GOES HERE</h1>
-    <ul>
-      <li><a href="index.html" class="effect">Home</a></li>
-      <li><a href="portfolio.html" class="effect">Portfolio</a></li>
-      <li id="about"><a href="about.html" class="effect">About</a></li>
-    </ul>
+
+  
+    <div class="row section">
+
+        <header id="header" class="twelve columns">
+        <h3>Andrew Barrios</h3>
+
+            <div class="statement_text"> 
+            <em>
+           
+            </em>
+            <br>
+            </div>
+
+        </header>
+
+
+    </div>
+
+      
+     
+
+   
   </div>
 
-    <footer>
-      <center>
-      <a href="mailto:khatibi.nl@gmail.com?Subject=Hello%20There" target="_top" class="effect"><i class="icon fas fa-envelope"></i></a>
-      <a href="https://www.instagram.com/fewnew/" class="effect"><i class="icon fab fa-instagram"></i></a>
-      <i class="icon fab fa-vimeo-v"></i>
-      <i class="icon fab fa-linkedin-in"></i>
-      </center>
-    </footer>
-
+    
+    <!-- end of MAIN container /////////////////-->
+	
+	
+	<!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
+	
+<div class="overlay-bg"> </div>
+    
+    <div class="overlay-content popup1">
+    
+    <!--   sketch content here///////////////// -->
+  
+    
+    <button class="close-btn">X</button>
+</div>
+    
+    <div class="overlay-content popup2">
+    
+	  <!-- sketch content here/////////////////-->
+    
+    <button class="close-btn">X</button>
+</div>
     <script>
-  VANTA.CELLS({
-    el: "#interactive",
-    mouseControls: true,
-    touchControls: true,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    color1: 0x33007d,
-    color2: 0x35f2d0,
-    size: 2.10,
-    speed: 3.50
-  })
-  </script>
+VANTA.WAVES({
+  el: "#your-element-selector",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x93957,
+  shininess: 125.00,
+  waveHeight: 14.00,
+  waveSpeed: 0.40,
+  zoom: 0.81
+})
+</script>
 </body>
 </html>
