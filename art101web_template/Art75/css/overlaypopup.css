@@ -9,7 +9,12 @@
 body {
 	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
 }
-
+#my-background {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: -999; /*order send to back*/
+}
 .main-content {
 	height: 800px;
 	width: 1000px;

@@ -14,7 +14,12 @@ body{
     color:#b1bbcc;
     
 }
-
+#my-background {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: -999; /*order send to back*/
+}
 a:link {
     color: #fff;
     text-decoration: none;
