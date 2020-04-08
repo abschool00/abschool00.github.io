@@ -15,7 +15,10 @@
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>                   <script type="text/javascript" src="css/overlaypopup.js"> </script>  
+  <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>                   <script type="text/javascript" src="css/overlaypopup.js"> </script> 
+         <script  type="text/javascript" src="css/three.r95.min.js"></script>
+        <script  type="text/javascript" src="css/three.min.js"></script>
+<script type="text/javascript" src="css/vanta.waves.min.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/overlaypopup.css" />
@@ -29,7 +32,7 @@
 
 </head>
 <body>
-
+ <div id="interactive"></div>
 <nav class="navbar">
       <div class="container nav_pad">  
            <ul>
@@ -96,6 +99,21 @@
     
     <button class="close-btn">X</button>
 </div>
-    
+     <script>
+VANTA.WAVES({
+  el: "#interactive",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x5b5f6d,
+  shininess: 59.00,
+  waveHeight: 20.00,
+  waveSpeed: 0.40,
+  zoom: 0.81
+})
+</script>
 </body>
 </html>
