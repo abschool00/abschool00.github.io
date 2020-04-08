@@ -135,7 +135,12 @@ code{
     box-sizing: border-box;
     padding: 0 40px;
 }
-
+#interactive {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: -999; /*order send to back*/
+}
 .item_container {
     background-color: #656565;
     box-sizing: border-box;
