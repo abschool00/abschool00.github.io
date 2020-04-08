@@ -127,6 +127,12 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
+#interactive {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: -999; /*order send to back*/
+}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
