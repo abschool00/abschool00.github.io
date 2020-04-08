@@ -12,6 +12,12 @@ background-color: #b1bbcc;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+#interactive {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: -999; /*order send to back*/
+}
 
 a:hover{
   color:#dfe2db;
