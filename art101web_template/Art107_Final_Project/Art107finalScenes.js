@@ -112,12 +112,47 @@ function scene_start()  {
  
   image(img2, 1,1,1080,720);
           click2 = new Clickable();
-          click2.locate(975, 115);
-  click2.resize(75, 75);
+            click2.locate(230, 465);
+  click2.resize(250, 100);
+ click2.onHover = function(){
+	 this.text = "DSW";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
+  }
+  
+  click2.onOutside = function(){
+	 this.text = "DSW";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
          click2.onPress = function(){
 	 snd1.play();
              mgr.showScene( scene_lvl1_1 );
   }
+        
+          click3 = new Clickable();
+         click3.locate(600, 465);
+  click3.resize(250, 100);
+              click3.onHover = function(){
+	 this.text = "Safeway";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
+  }
+  
+  click3.onOutside = function(){
+	 this.text = "Safeway";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click3.onPress = function(){
+	 snd1.play();
+             mgr.showScene( scene_lvl1_1 );
+  }
+      
        
   }
      this.enter = function()
@@ -132,6 +167,7 @@ function scene_start()  {
  
   image(img2, 1,1,1080,720);
           click2.draw();
+          click3.draw();
       
      }
   
