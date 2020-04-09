@@ -178,25 +178,25 @@ function scene_start()  {
           background(255);
  
   image(img3, 1,1,1080,720);
-          click9 = new Clickable();
-              click9.locate(600, 600);
-  click9.resize(250, 100);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
         
-        click9.onHover = function(){
+        click7.onHover = function(){
 	 this.text = "Retry";
      this.textSize = 80;          
         this.color = "#FFFFFF";
   }
   
-  click9.onOutside = function(){
+  click7.onOutside = function(){
 	 this.text = "Retry";
       this.textSize = 80;
         this.color = "#FFFFFF";
      
        
   }  
-         click9.onPress = function(){
-	 snd2.play();
+         click7.onPress = function(){
+	
              mgr.showScene( scene_start );
   }
        
@@ -212,7 +212,7 @@ function scene_start()  {
            background(255);
  
   image(img3, 1,1,1080,720);
-          click9.draw();
+          click7.draw();
       
      }
   
