@@ -252,7 +252,7 @@ function scene_start()  {
   click5.resize(250, 100);
               click5.onHover = function(){
 	 this.text = "Toilet Paper";
-     this.textSize = 50;          
+     this.textSize = 20;          
         this.color = "#FFFFFF";
   }
   
