@@ -112,7 +112,7 @@ function scene_start()  {
  
   image(img2, 1,1,1080,720);
           click2 = new Clickable();
-            click2.locate(230, 675);
+            click2.locate(230, 600);
   click2.resize(250, 100);
  click2.onHover = function(){
 	 this.text = "DSW";
@@ -128,12 +128,12 @@ function scene_start()  {
        
   }  
          click2.onPress = function(){
-	 snd1.play();
+	
              mgr.showScene( scene_lvl1_1 );
   }
         
           click3 = new Clickable();
-         click3.locate(600, 675);
+         click3.locate(600, 600);
   click3.resize(250, 100);
               click3.onHover = function(){
 	 this.text = "Safeway";
@@ -149,7 +149,7 @@ function scene_start()  {
        
   }  
          click3.onPress = function(){
-	 snd1.play();
+	
              mgr.showScene( scene_lvl2 );
   }
       
@@ -179,7 +179,7 @@ function scene_start()  {
  
   image(img3, 1,1,1080,720);
           click9 = new Clickable();
-              click9.locate(600, 675);
+              click9.locate(600, 600);
   click9.resize(250, 100);
         
         click9.onHover = function(){
@@ -201,8 +201,8 @@ function scene_start()  {
   }
        
   }
-     this.enter = function()
-  {
+     this.enter = function(){
+
            background(255);
  
   image(img3, 1,1,1080,720);
