@@ -112,52 +112,16 @@ function scene_start()  {
    this.setup = function() {
           background(255);
  
-  
 image(img2, 1,1,1080,720);
-               click13 = new Clickable();
-          click13.locate(230, 500);
-  click13.resize(250, 100);
-        
-        click13.onHover = function(){
-	 this.text = "DSW";
-     this.textSize = 80;          
-        this.color = "#FFFFFF";
+          click2 = new Clickable();
+          click2.locate(975, 115);
+  click2.resize(75, 75);
+         click2.onPress = function(){
+	 snd1.play();
+             mgr.showScene( scene_lvl1_1 );
   }
-  
-  click13.onOutside = function(){
-	 this.text = "DSW";
-      this.textSize = 80;
-        this.color = "#FFFFFF";
-     
        
-  }  
-           click13.onPress = function()
-         {
-	mgr.showScene( scene_lvl1_1 );
-  }   
-            click14= new Clickable();
-          click14.locate(600, 500);
-  click14.resize(250, 100);
-        
-          click14.onHover = function(){
-	 this.text = "Safeway";
-     this.textSize = 80;          
-        this.color = "#FFFFFF";
   }
-  
-  click14.onOutside = function(){
-	 this.text = "Safeway";
-      this.textSize = 80;
-        this.color = "#FFFFFF";
-  }
-         click14.onPress = function()
-         {
-	
-            
-      mgr.showScene( scene_lvl1_1 );
-  }
-
-    }
      this.enter = function()
   {
            background(255);
@@ -169,8 +133,8 @@ image(img2, 1,1,1080,720);
            background(255);
  
   image(img2, 1,1,1080,720);
-          click13.draw();
-         click14.draw();
+          click2.draw();
+      
      }
   
 
