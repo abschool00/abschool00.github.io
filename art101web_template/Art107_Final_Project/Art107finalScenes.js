@@ -18,8 +18,6 @@ var click9;
 var click10;
 var click11;
 var click12;
-var click13;
-var click14;
 
 // sprite1.collide(sprite2);
 // sprite1.overlap(sprite2);
@@ -112,7 +110,7 @@ function scene_start()  {
    this.setup = function() {
           background(255);
  
-image(img2, 1,1,1080,720);
+  image(img2, 1,1,1080,720);
           click2 = new Clickable();
           click2.locate(975, 115);
   click2.resize(75, 75);
