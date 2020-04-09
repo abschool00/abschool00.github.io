@@ -81,7 +81,7 @@ function scene_start()  {
             
       mgr.showScene( scene_help );
   }
-
+    }
      this.enter = function()
   {
            background(255);
@@ -166,8 +166,8 @@ function scene_start()  {
           click5.draw();
          click6.draw();
      }
+  }
 
-}
  function scene_lvl1_1()  {
    this.setup = function() {
           background(255);
