@@ -53,7 +53,7 @@ function scene_start()  {
          {
 	
             
-   //   mgr.showScene( scene_lvl1 );
+      mgr.showScene( scene_lvl1 );
   }   
       
      
@@ -110,51 +110,16 @@ function scene_start()  {
    this.setup = function() {
           background(255);
  
-image(img2, 1,1,1080,720);
-               click5 = new Clickable();
-          click5.locate(230, 500);
-  click5.resize(250, 100);
-        
-        click5.onHover = function(){
-	 this.text = "DSW";
-     this.textSize = 80;          
-        this.color = "#FFFFFF";
+  image(img2, 1,1,1080,720);
+          click2 = new Clickable();
+          click2.locate(975, 115);
+  click2.resize(75, 75);
+         click2.onPress = function(){
+	 snd1.play();
+             mgr.showScene( scene_lvl1_1 );
   }
-  
-  click5.onOutside = function(){
-	 this.text = "DSW";
-      this.textSize = 80;
-        this.color = "#FFFFFF";
-     
        
-  }  
-           click5.onPress = function()
-         {
-	mgr.showScene( scene_lvl1_1 );
-  }   
-            click6= new Clickable();
-          click6.locate(600, 500);
-  click6.resize(250, 100);
-        
-          click6.onHover = function(){
-	 this.text = "Safeway";
-     this.textSize = 80;          
-        this.color = "#FFFFFF";
   }
-  
-  click6.onOutside = function(){
-	 this.text = "Safeway";
-      this.textSize = 80;
-        this.color = "#FFFFFF";
-  }
-         click6.onPress = function()
-         {
-	
-            
-      mgr.showScene( scene_lvl1_2 );
-  }
-
-    }
      this.enter = function()
   {
            background(255);
@@ -166,10 +131,12 @@ image(img2, 1,1,1080,720);
            background(255);
  
   image(img2, 1,1,1080,720);
-          click5.draw();
-         click6.draw();
+          click2.draw();
+      
      }
-  }
+  
+
+}
  function scene_lvl1_1()  {
    this.setup = function() {
           background(255);
@@ -470,6 +437,70 @@ function scene_lvl4_1() {
      }     
                   
               }
+//   this.y = 0;
+//    // var y = 0;
+//    this.lox = 50;
+//    // var lox = 50;
+//
+//   this.loy = 120;
+//    // var loy = 120;
+//
+//    hell = "bye";
+//
+//    // important to create object here not in set
+//   //this.ghosty = createSprite(this.lox, this.loy);
+//    // var ghosty = createSprite(lox,loy);
+//
+//  this.setup = function() {
+//      console.log("We are at setup for scene2");
+//     ghosty.position.x++;
+//     
+//  }
+//
+//  this.enter = function()
+//  {
+//      console.log("We are at entering scene2");
+//        console.log(hell);
+//    ghosty.position.x = 50;
+//    ghosty.position.y = 80;
+//    ghosty.changeAnimation("normal");
+//
+//    ghosty.onMouseOver = function() {
+//
+//      console.log("over");
+//      this.changeAnimation("stand");
+//      this.position.x = width/2;
+//      this.position.y = height/2;
+//    }
+//
+//    ghosty.onMouseOut = function() {
+//
+//      console.log("out");
+//      this.changeAnimation("stand");
+//      this.position.x++ ;
+//      this.position.y++;
+//    }
+//
+//
+//
+//  }
+//
+//
+//
+//
+//    this.draw = function()
+//    {
+//        background("red");
+//        drawSprites();
+//    }
+//
+//    this.mousePressed = function()
+//    {
+//      //console.log("woot");
+//      // ghost.changeAnimation("stand");
+//        this.sceneManager.showNextScene();
+//    }
+
 
 
 
