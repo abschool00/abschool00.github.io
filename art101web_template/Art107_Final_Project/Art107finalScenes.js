@@ -258,7 +258,7 @@ function scene_start()  {
   
   click5.onOutside = function(){
 	 this.text = "Toilet Paper";
-      this.textSize = 50;
+      this.textSize = 20;
         this.color = "#FFFFFF";
      
        
