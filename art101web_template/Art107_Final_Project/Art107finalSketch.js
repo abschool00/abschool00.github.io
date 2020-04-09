@@ -56,7 +56,6 @@ function setup() {
     mgr.addScene (scene_start);
     mgr.addScene (scene_lvl1);
     mgr.addScene (scene_lvl1_1);
-     mgr.addScene (scene_lvl1_2);
     mgr.addScene (scene_lvl2);
     mgr.addScene (scene_lvl2_1);
     mgr.addScene (scene_lvl3);
