@@ -53,39 +53,35 @@ function scene_start()  {
          {
 	
             
-   //   mgr.showScene( scene_lvl1 );
+      mgr.showScene( scene_lvl1 );
   }   
       
      
          
          
          
-            click8= new Clickable();
-          click8.locate(600, 465);
-  click8.resize(250, 100);
+            click4= new Clickable();
+          click4.locate(600, 465);
+  click4.resize(250, 100);
         
-          click8.onHover = function(){
+          click4.onHover = function(){
 	 this.text = "Help";
      this.textSize = 80;          
         this.color = "#FFFFFF";
   }
   
-  click8.onOutside = function(){
+  click4.onOutside = function(){
 	 this.text = "Help";
       this.textSize = 80;
         this.color = "#FFFFFF";
   }
-         click8.onPress = function()
+         click4.onPress = function()
          {
 	
             
       mgr.showScene( scene_help );
   }
-//         click1.onOutside = function(){
-//  this.color = "#rgba(0,0,0,0)";
-//  this.textColor = "#rgba(0,0,0,0)";             
-//}
-    }
+
      this.enter = function()
   {
            background(255);
@@ -98,7 +94,7 @@ function scene_start()  {
  
   image(img1, 1,1,1080,720);
           click1.draw();
-         click8.draw();
+         click4.draw();
      }
     
  
@@ -111,15 +107,50 @@ function scene_start()  {
           background(255);
  
   image(img2, 1,1,1080,720);
-          click2 = new Clickable();
-          click2.locate(975, 115);
-  click2.resize(75, 75);
-         click2.onPress = function(){
-	 snd1.play();
-             mgr.showScene( scene_lvl1_1 );
+               click5 = new Clickable();
+          click5.locate(230, 500);
+  click5.resize(250, 100);
+        
+        click5.onHover = function(){
+	 this.text = "DSW";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
   }
+  
+  click5.onOutside = function(){
+	 this.text = "DSW";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
        
+  }  
+           click5.onPress = function()
+         {
+	mgr.showScene( scene_lvl1_1 );
+  }   
+            click6= new Clickable();
+          click6.locate(600, 500);
+  click6.resize(250, 100);
+        
+          click6.onHover = function(){
+	 this.text = "Safeway";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
   }
+  
+  click6.onOutside = function(){
+	 this.text = "Safeway";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+  }
+         click6.onPress = function()
+         {
+	
+            
+      mgr.showScene( scene_lvl1_2 );
+  }
+
+    }
      this.enter = function()
   {
            background(255);
@@ -131,10 +162,9 @@ function scene_start()  {
            background(255);
  
   image(img2, 1,1,1080,720);
-          click2.draw();
-      
+          click5.draw();
+         click6.draw();
      }
-  
 
 }
  function scene_lvl1_1()  {
@@ -175,91 +205,23 @@ function scene_start()  {
    this.setup = function() {
           background(255);
  
-  image(img3, 1,1,1080,720);
-          click3 = new Clickable();
-                click3.locate(975, 115);
-  click3.resize(75, 75);
-         click3.onPress = function(){
-	snd1.play();
-             mgr.showScene( scene_lvl2_1 );
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
  
-  image(img3, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img3, 1,1,1080,720);
-          click3.draw();
-     }
-
-
-
+  }
   }
  function scene_lvl2_1()  {
    this.setup = function() {
           background(255);
  
-  image(img9, 1,1,1080,720);
-          click10 = new Clickable();
-                click10.locate(975, 115);
-  click10.resize(75, 75);
-         click10.onPress = function(){
-	snd2.play();
-             mgr.showScene( scene_lvl3 );
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
  
-  image(img9, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img9, 1,1,1080,720);
-          click10.draw();
-     }
-
-
-
-  }
-
-
+   }
+ }
 
 function scene_lvl3()  {
   
    this.setup = function() {
           background(255);
  
-  image(img4, 1,1,1080,720);
-          click4 = new Clickable();
-                click4.locate(975, 115);
-  click4.resize(75, 75);
-         click4.onPress = function(){
-	 snd1.play();
-             mgr.showScene( scene_lvl3_1 );
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
- 
-  image(img4, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img4, 1,1,1080,720);
-          click4.draw();
+  
      }
 
 }
@@ -268,27 +230,7 @@ function scene_lvl3_1()  {
    this.setup = function() {
           background(255);
  
-  image(img10, 1,1,1080,720);
-          click11 = new Clickable();
-                click11.locate(975, 115);
-  click11.resize(75, 75);
-         click11.onPress = function(){
-	 snd2.play();
-             mgr.showScene( scene_lvl4 );
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
  
-  image(img10, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img10, 1,1,1080,720);
-          click11.draw();
      }
 
 }
@@ -298,27 +240,7 @@ function scene_lvl4() {
      this.setup = function() {
           background(255);
  
-  image(img5, 1,1,1080,720);
-          click5 = new Clickable();
-               click5.locate(975, 115);
-  click5.resize(75, 75);
-         click5.onPress = function(){
-	 snd1.play();
-             mgr.showScene( scene_lvl4_1);
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
  
-  image(img5, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img5, 1,1,1080,720);
-          click5.draw();
      }
 
         
@@ -328,27 +250,7 @@ function scene_lvl4_1() {
      this.setup = function() {
           background(255);
  
-  image(img11, 1,1,1080,720);
-          click12 = new Clickable();
-               click12.locate(975, 115);
-  click12.resize(75, 75);
-         click12.onPress = function(){
-	 snd3.play();
-             mgr.showScene( scene_end);
-  }
-  }
-     this.enter = function()
-  {
-           background(255);
- 
-  image(img11, 1,1,1080,720);
-     }
-     this.draw = function()
-    {
-           background(255);
- 
-  image(img11, 1,1,1080,720);
-          click12.draw();
+  
      }
 
         
@@ -359,21 +261,21 @@ function scene_lvl4_1() {
           background(255);
  
   image(img7, 1,1,1080,720);
-          click6 = new Clickable();
-          click6.locate(900, 30);
-  click6.resize(150, 75);
-        click6.onHover = function(){
+          click3 = new Clickable();
+          click3.locate(900, 30);
+  click3.resize(150, 75);
+        click3.onHover = function(){
 	 this.text = "Main Menu";
      this.textSize = 20;          
         this.color = "#FFFFFF";
   }
   
-  click6.onOutside = function(){
+  click3.onOutside = function(){
 	 this.text = "Main Menu";
       this.textSize = 20;
         this.color = "#FFFFFF";
   }
-         click6.onPress = function(){
+         click3.onPress = function(){
 	
              mgr.showScene( scene_start );
   }
@@ -389,7 +291,7 @@ function scene_lvl4_1() {
            background(255);
  
   image(img7, 1,1,1080,720);
-          click6.draw();
+          click3.draw();
      }
 
 }
@@ -403,21 +305,21 @@ function scene_lvl4_1() {
           background(255);
  
   image(img6, 1,1,1080,720);
-          click7 = new Clickable();
-          click7.locate(410, 480);
-  click7.resize(250, 120);
-     click7.onHover = function(){
+          click2 = new Clickable();
+          click2.locate(410, 480);
+  click2.resize(250, 120);
+     click2.onHover = function(){
 	 this.text = "Play Again";
      this.textSize = 40;          
         this.color = "#FFFFFF";
   }
   
-  click7.onOutside = function(){
+  click2.onOutside = function(){
 	 this.text = "Play Again";
       this.textSize = 40;
         this.color = "#FFFFFF";
   }
-         click7.onPress = function(){
+         click2.onPress = function(){
 	
              mgr.showScene( scene_start );
   }
@@ -433,75 +335,9 @@ function scene_lvl4_1() {
            background(255);
  
   image(img6, 1,1,1080,720);
-          click7.draw();
+          click2.draw();
      }     
                   
               }
-//   this.y = 0;
-//    // var y = 0;
-//    this.lox = 50;
-//    // var lox = 50;
-//
-//   this.loy = 120;
-//    // var loy = 120;
-//
-//    hell = "bye";
-//
-//    // important to create object here not in set
-//   //this.ghosty = createSprite(this.lox, this.loy);
-//    // var ghosty = createSprite(lox,loy);
-//
-//  this.setup = function() {
-//      console.log("We are at setup for scene2");
-//     ghosty.position.x++;
-//     
-//  }
-//
-//  this.enter = function()
-//  {
-//      console.log("We are at entering scene2");
-//        console.log(hell);
-//    ghosty.position.x = 50;
-//    ghosty.position.y = 80;
-//    ghosty.changeAnimation("normal");
-//
-//    ghosty.onMouseOver = function() {
-//
-//      console.log("over");
-//      this.changeAnimation("stand");
-//      this.position.x = width/2;
-//      this.position.y = height/2;
-//    }
-//
-//    ghosty.onMouseOut = function() {
-//
-//      console.log("out");
-//      this.changeAnimation("stand");
-//      this.position.x++ ;
-//      this.position.y++;
-//    }
-//
-//
-//
-//  }
-//
-//
-//
-//
-//    this.draw = function()
-//    {
-//        background("red");
-//        drawSprites();
-//    }
-//
-//    this.mousePressed = function()
-//    {
-//      //console.log("woot");
-//      // ghost.changeAnimation("stand");
-//        this.sceneManager.showNextScene();
-//    }
-
-
-
 
 

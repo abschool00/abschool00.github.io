@@ -11,15 +11,15 @@ var image1_up, image2_over,snd1,snd2, snd3,img1,img2;
 
 function preload() {
 
-   snd1 = loadSound("sound/Correct_AnswerIdea_Sound_Effects.mp3");
-    snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
-    snd3 = loadSound("sound/Party_Horn_Sound_Effect.mp3");
+//   snd1 = loadSound("sound/Correct_AnswerIdea_Sound_Effects.mp3");
+//    snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
+//    snd3 = loadSound("sound/Party_Horn_Sound_Effect.mp3");
     
     
     
     
     img1 = loadImage('assets/Quarantine_Run_Title_Screen.png');
-    img2 = loadImage('assets/Scene1.png');
+    img2 = loadImage('assets/Quarantine_Run_Screen_1.png');
     img3 = loadImage('assets/Scene2.png');
     img4 = loadImage('assets/Scene3.png');
     img5 = loadImage('assets/Scene4.png');
@@ -56,6 +56,7 @@ function setup() {
     mgr.addScene (scene_start);
     mgr.addScene (scene_lvl1);
     mgr.addScene (scene_lvl1_1);
+     mgr.addScene (scene_lvl1_2);
     mgr.addScene (scene_lvl2);
     mgr.addScene (scene_lvl2_1);
     mgr.addScene (scene_lvl3);
