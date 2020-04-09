@@ -238,13 +238,13 @@ function scene_start()  {
   {
            background(255);
  
-  image(img3, 1,1,1080,720);
+  image(img4, 1,1,1080,720);
      }
      this.draw = function()
     {
            background(255);
  
-  image(img3, 1,1,1080,720);
+  image(img4, 1,1,1080,720);
           click3.draw();
      }
 
