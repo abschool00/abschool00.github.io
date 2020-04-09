@@ -244,7 +244,7 @@ function scene_start()  {
   }  
          click4.onPress = function(){
 	
-         //    mgr.showScene( scene_lvl3 );
+             mgr.showScene( scene_start );
   }
         
           click5 = new Clickable();
@@ -265,7 +265,7 @@ function scene_start()  {
   }  
          click5.onPress = function(){
 	
-       //      mgr.showScene( scene_lvl2_1 );
+            mgr.showScene( scene_start );
   }
       
        
