@@ -6,14 +6,14 @@
 // exmample of global var that can be used between scenes
  
 var hell = "hi";
-var click1;
-var click2;
-var click3;
-var click4;
-var click5;
-var click6;
-var click7;
-var click8;
+var click1; //
+var click2; //
+var click3; //
+var click4; //
+var click5; //
+var click6; //
+var click7; //Retry
+var click8; //
 var click9;
 var click10;
 var click11;
@@ -342,44 +342,44 @@ function scene_lvl3()  {
           background(255);
  
    image(img8, 1,1,1080,720);
-          click4 = new Clickable();
-            click4.locate(230, 600);
-  click4.resize(250, 100);
- click4.onHover = function(){
+          click9 = new Clickable();
+            click9.locate(230, 600);
+  click9.resize(250, 100);
+ click9.onHover = function(){
 	 this.text = "Home";
      this.textSize = 50;          
         this.color = "#FFFFFF";
   }
   
-  click4.onOutside = function(){
+  click9.onOutside = function(){
 	 this.text = "Home";
       this.textSize = 50;
         this.color = "#FFFFFF";
      
        
   }  
-         click4.onPress = function(){
+         click9.onPress = function(){
 	
              mgr.showScene( scene_lvl4 );
   }
         
-          click5 = new Clickable();
-         click5.locate(600, 600);
-  click5.resize(250, 100);
+          click10 = new Clickable();
+         click10.locate(600, 600);
+  click10.resize(250, 100);
               click5.onHover = function(){
 	 this.text = "Gas Station";
      this.textSize = 30;          
         this.color = "#FFFFFF";
   }
   
-  click5.onOutside = function(){
+  click10.onOutside = function(){
 	 this.text = "Gas Station";
       this.textSize = 30;
         this.color = "#FFFFFF";
      
        
   }  
-         click5.onPress = function(){
+         click10.onPress = function(){
 	
             mgr.showScene( scene_lvl3_1 );
   }
@@ -397,8 +397,8 @@ function scene_lvl3()  {
            background(255);
  
   image(img8, 1,1,1080,720);
-          click4.draw();
-          click5.draw();
+          click9.draw();
+          click10.draw();
       
      }
   
@@ -455,44 +455,44 @@ function scene_lvl4() {
           background(255);
  
    image(img10, 1,1,1080,720);
-          click4 = new Clickable();
-            click4.locate(230, 600);
-  click4.resize(250, 100);
- click4.onHover = function(){
+          click11 = new Clickable();
+            click11.locate(230, 600);
+  click11.resize(250, 100);
+ click11.onHover = function(){
 	 this.text = "Drug Store";
-     this.textSize = 50;          
+     this.textSize = 20;          
         this.color = "#FFFFFF";
   }
   
-  click4.onOutside = function(){
+  click11.onOutside = function(){
 	 this.text = "Drug Store";
-      this.textSize = 50;
+      this.textSize = 20;
         this.color = "#FFFFFF";
      
        
   }  
-         click4.onPress = function(){
+         click11.onPress = function(){
 	
              mgr.showScene( scene_start );
   }
         
-          click5 = new Clickable();
-         click5.locate(600, 600);
-  click5.resize(250, 100);
+          click12 = new Clickable();
+         click12.locate(600, 600);
+  click12.resize(250, 100);
               click5.onHover = function(){
 	 this.text = "Hospital";
-     this.textSize = 30;          
+     this.textSize = 40;          
         this.color = "#FFFFFF";
   }
   
-  click5.onOutside = function(){
+  click12.onOutside = function(){
 	 this.text = "Hospital";
-      this.textSize = 30;
+      this.textSize = 40;
         this.color = "#FFFFFF";
      
        
   }  
-         click5.onPress = function(){
+         click12.onPress = function(){
 	
             mgr.showScene( scene_lvl4_1 );
   }
@@ -510,8 +510,8 @@ function scene_lvl4() {
            background(255);
  
   image(img10, 1,1,1080,720);
-          click4.draw();
-          click5.draw();
+          click11.draw();
+          click12.draw();
       
      }
 
