@@ -405,80 +405,150 @@ function scene_lvl3()  {
 }
 function scene_lvl3_1()  {
   
-   this.setup = function() {
+    this.setup = function() {
           background(255);
  
-  image(img10, 1,1,1080,720);
-          click11 = new Clickable();
-                click11.locate(975, 115);
-  click11.resize(75, 75);
-         click11.onPress = function(){
-	 snd2.play();
-             mgr.showScene( scene_lvl4 );
+  image(img9, 1,1,1080,720);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
+        
+        click7.onHover = function(){
+	 this.text = "Retry";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
   }
+  
+  click7.onOutside = function(){
+	 this.text = "Retry";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click7.onPress = function(){
+	
+             mgr.showScene( scene_start );
   }
-     this.enter = function()
-  {
+       
+  }
+     this.enter = function(){
+
            background(255);
  
-  image(img10, 1,1,1080,720);
+  image(img9, 1,1,1080,720);
      }
      this.draw = function()
     {
            background(255);
  
-  image(img10, 1,1,1080,720);
-          click11.draw();
+  image(img9, 1,1,1080,720);
+          click7.draw();
+      
      }
-
+  
 }
 
 function scene_lvl4() {
 
-     this.setup = function() {
+      this.setup = function() {
           background(255);
  
-  image(img5, 1,1,1080,720);
-          click5 = new Clickable();
-               click5.locate(975, 115);
-  click5.resize(75, 75);
-         click5.onPress = function(){
-	 snd1.play();
-             mgr.showScene( scene_lvl4_1);
+   image(img10, 1,1,1080,720);
+          click4 = new Clickable();
+            click4.locate(230, 600);
+  click4.resize(250, 100);
+ click4.onHover = function(){
+	 this.text = "Drug Store";
+     this.textSize = 50;          
+        this.color = "#FFFFFF";
   }
+  
+  click4.onOutside = function(){
+	 this.text = "Drug Store";
+      this.textSize = 50;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click4.onPress = function(){
+	
+             mgr.showScene( scene_start );
+  }
+        
+          click5 = new Clickable();
+         click5.locate(600, 600);
+  click5.resize(250, 100);
+              click5.onHover = function(){
+	 this.text = "Hospital";
+     this.textSize = 30;          
+        this.color = "#FFFFFF";
+  }
+  
+  click5.onOutside = function(){
+	 this.text = "Hospital";
+      this.textSize = 30;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click5.onPress = function(){
+	
+            mgr.showScene( scene_lvl4_1 );
+  }
+      
+       
   }
      this.enter = function()
   {
            background(255);
  
-  image(img5, 1,1,1080,720);
+  image(img10, 1,1,1080,720);
      }
      this.draw = function()
     {
            background(255);
  
-  image(img5, 1,1,1080,720);
+  image(img10, 1,1,1080,720);
+          click4.draw();
           click5.draw();
+      
      }
 
         
 }
 function scene_lvl4_1() {
 
-     this.setup = function() {
+  
+    this.setup = function() {
           background(255);
  
   image(img11, 1,1,1080,720);
-          click12 = new Clickable();
-               click12.locate(975, 115);
-  click12.resize(75, 75);
-         click12.onPress = function(){
-	 snd3.play();
-             mgr.showScene( scene_end);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
+        
+        click7.onHover = function(){
+	 this.text = "Retry";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
   }
+  
+  click7.onOutside = function(){
+	 this.text = "Retry";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click7.onPress = function(){
+	
+             mgr.showScene( scene_start );
   }
-     this.enter = function()
-  {
+       
+  }
+     this.enter = function(){
+
            background(255);
  
   image(img11, 1,1,1080,720);
@@ -488,7 +558,8 @@ function scene_lvl4_1() {
            background(255);
  
   image(img11, 1,1,1080,720);
-          click12.draw();
+          click7.draw();
+      
      }
 
         

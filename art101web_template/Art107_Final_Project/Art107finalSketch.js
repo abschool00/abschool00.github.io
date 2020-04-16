@@ -26,9 +26,9 @@ function preload() {
     img6 = loadImage('assets/EndScene.png');
     img7 = loadImage('assets/Quarantine_Run_Help_Screen.png');
     img8 = loadImage('assets/Quarantine_Run_Screen_Lvl3.png');
-    img9 = loadImage('assets/Scene2_1.png');
-    img10 = loadImage('assets/Scene3_1.png');
-    img11 = loadImage('assets/Scene4_1.png');
+    img9 = loadImage('assets/Quarantine_Run_Screen_Lvl3_1.png');
+    img10 = loadImage('assets/Quarantine_Run_Screen_Lvl4.png');
+    img11 = loadImage('assets/Quarantine_Run_Screen_Lvl4_1.png');
 
 
 }
