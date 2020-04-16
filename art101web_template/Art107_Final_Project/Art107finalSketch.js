@@ -15,17 +15,17 @@ function preload() {
 //    snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
 //    snd3 = loadSound("sound/Party_Horn_Sound_Effect.mp3");
     
-    
+     
     
     
     img1 = loadImage('assets/Quarantine_Run_Title_Screen.png');
     img2 = loadImage('assets/Quarantine_Run_Screen_1.png');
     img3 = loadImage('assets/Quarantine_Run_Screen_Lvl1_1.png');
     img4 = loadImage('assets/Quarantine_Run_Screen_Lvl2.png');
-    img5 = loadImage('assets/Scene4.png');
+    img5 = loadImage('assets/Quarantine_Run_Screen_Lvl2_1.png');
     img6 = loadImage('assets/EndScene.png');
     img7 = loadImage('assets/Quarantine_Run_Help_Screen.png');
-    img8 = loadImage('assets/Scene1_1.png');
+    img8 = loadImage('assets/Quarantine_Run_Screen_Lvl3.png');
     img9 = loadImage('assets/Scene2_1.png');
     img10 = loadImage('assets/Scene3_1.png');
     img11 = loadImage('assets/Scene4_1.png');

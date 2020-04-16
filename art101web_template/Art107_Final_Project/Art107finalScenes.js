@@ -4,7 +4,7 @@
 // =============================================================
 
 // exmample of global var that can be used between scenes
-
+ 
 var hell = "hi";
 var click1;
 var click2;
@@ -244,7 +244,7 @@ function scene_start()  {
   }  
          click4.onPress = function(){
 	
-             mgr.showScene( scene_start );
+             mgr.showScene( scene_lvl3 );
   }
         
           click5 = new Clickable();
@@ -265,7 +265,7 @@ function scene_start()  {
   }  
          click5.onPress = function(){
 	
-            mgr.showScene( scene_start );
+            mgr.showScene( scene_lvl2_1 );
   }
       
        
@@ -292,30 +292,45 @@ function scene_start()  {
    this.setup = function() {
           background(255);
  
-  image(img9, 1,1,1080,720);
-          click10 = new Clickable();
-                click10.locate(975, 115);
-  click10.resize(75, 75);
-         click10.onPress = function(){
-	snd2.play();
-             mgr.showScene( scene_lvl3 );
+  image(img5, 1,1,1080,720);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
+        
+        click7.onHover = function(){
+	 this.text = "Retry";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
   }
+  
+  click7.onOutside = function(){
+	 this.text = "Retry";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click7.onPress = function(){
+	
+             mgr.showScene( scene_start );
   }
-     this.enter = function()
-  {
+       
+  }
+     this.enter = function(){
+
            background(255);
  
-  image(img9, 1,1,1080,720);
+  image(img5, 1,1,1080,720);
      }
      this.draw = function()
     {
            background(255);
  
-  image(img9, 1,1,1080,720);
-          click10.draw();
+  image(img5, 1,1,1080,720);
+          click7.draw();
+      
      }
-
-
+  
 
   }
 
@@ -326,29 +341,67 @@ function scene_lvl3()  {
    this.setup = function() {
           background(255);
  
-  image(img4, 1,1,1080,720);
+   image(img8, 1,1,1080,720);
           click4 = new Clickable();
-                click4.locate(975, 115);
-  click4.resize(75, 75);
-         click4.onPress = function(){
-	 snd1.play();
-             mgr.showScene( scene_lvl3_1 );
+            click4.locate(230, 600);
+  click4.resize(250, 100);
+ click4.onHover = function(){
+	 this.text = "Home";
+     this.textSize = 50;          
+        this.color = "#FFFFFF";
   }
+  
+  click4.onOutside = function(){
+	 this.text = "Home";
+      this.textSize = 50;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click4.onPress = function(){
+	
+             mgr.showScene( scene_lvl4 );
+  }
+        
+          click5 = new Clickable();
+         click5.locate(600, 600);
+  click5.resize(250, 100);
+              click5.onHover = function(){
+	 this.text = "Gas Station";
+     this.textSize = 30;          
+        this.color = "#FFFFFF";
+  }
+  
+  click5.onOutside = function(){
+	 this.text = "Gas Station";
+      this.textSize = 30;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click5.onPress = function(){
+	
+            mgr.showScene( scene_lvl3_1 );
+  }
+      
+       
   }
      this.enter = function()
   {
            background(255);
  
-  image(img4, 1,1,1080,720);
+  image(img8, 1,1,1080,720);
      }
      this.draw = function()
     {
            background(255);
  
-  image(img4, 1,1,1080,720);
+  image(img8, 1,1,1080,720);
           click4.draw();
+          click5.draw();
+      
      }
-
+  
 }
 function scene_lvl3_1()  {
   
