@@ -487,7 +487,7 @@ function scene_lvl4() {
           click12 = new Clickable();
          click12.locate(600, 600);
   click12.resize(250, 100);
-              click5.onHover = function(){
+              click12.onHover = function(){
 	 this.text = "Hospital";
      this.textSize = 40;          
         this.color = "#FFFFFF";
@@ -595,7 +595,7 @@ function scene_lvl4_1() {
         this.color = "#FFFFFF";
   }
          click6.onPress = function(){
-		 snd2.play();
+		 snd2.jump(0.5, 1);
 
              mgr.showScene( scene_start );
   }
