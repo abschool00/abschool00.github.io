@@ -14,10 +14,10 @@ var click5; //
 var click6; //
 var click7; //Retry
 var click8; //
-var click9;
-var click10;
-var click11;
-var click12;
+var click9; //
+var click10; //
+var click11; //
+var click12; //
 
 // sprite1.collide(sprite2);
 // sprite1.overlap(sprite2);
@@ -52,7 +52,7 @@ function scene_start()  {
            click1.onPress = function()
          {
 	
-            
+             snd2.play();
       mgr.showScene( scene_lvl1 );
   }   
       
@@ -78,7 +78,7 @@ function scene_start()  {
          click8.onPress = function()
          {
 	
-            
+             snd2.play();
       mgr.showScene( scene_help );
   }
 //         click1.onOutside = function(){
@@ -149,7 +149,8 @@ function scene_start()  {
        
   }  
          click3.onPress = function(){
-	
+		 snd1.play();
+
              mgr.showScene( scene_lvl2 );
   }
       
@@ -196,7 +197,8 @@ function scene_start()  {
        
   }  
          click7.onPress = function(){
-	
+			 snd2.play();
+
              mgr.showScene( scene_start );
   }
        
@@ -243,7 +245,8 @@ function scene_start()  {
        
   }  
          click4.onPress = function(){
-	
+			 snd1.play();
+
              mgr.showScene( scene_lvl3 );
   }
         
@@ -311,7 +314,8 @@ function scene_start()  {
        
   }  
          click7.onPress = function(){
-	
+			 snd2.play();
+
              mgr.showScene( scene_start );
   }
        
@@ -359,7 +363,8 @@ function scene_lvl3()  {
        
   }  
          click9.onPress = function(){
-	
+			 snd1.play();
+
              mgr.showScene( scene_lvl4 );
   }
         
@@ -427,7 +432,8 @@ function scene_lvl3_1()  {
        
   }  
          click7.onPress = function(){
-	
+			 snd2.play();
+
              mgr.showScene( scene_start );
   }
        
@@ -472,7 +478,8 @@ function scene_lvl4() {
        
   }  
          click11.onPress = function(){
-	
+			 snd1.play();
+
              mgr.showScene( scene_start );
   }
         
@@ -542,7 +549,8 @@ function scene_lvl4_1() {
        
   }  
          click7.onPress = function(){
-	
+			 snd2.play();
+
              mgr.showScene( scene_start );
   }
        
@@ -585,7 +593,8 @@ function scene_lvl4_1() {
         this.color = "#FFFFFF";
   }
          click6.onPress = function(){
-	
+		 snd2.play();
+
              mgr.showScene( scene_start );
   }
   }
@@ -629,7 +638,7 @@ function scene_lvl4_1() {
         this.color = "#FFFFFF";
   }
          click7.onPress = function(){
-	
+	 snd2.play();
              mgr.showScene( scene_start );
   }
   }

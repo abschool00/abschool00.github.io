@@ -11,9 +11,9 @@ var image1_up, image2_over,snd1,snd2, snd3,img1,img2;
 
 function preload() {
 
-//   snd1 = loadSound("sound/Correct_AnswerIdea_Sound_Effects.mp3");
-//    snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
-//    snd3 = loadSound("sound/Party_Horn_Sound_Effect.mp3");
+  snd1 = loadSound("sound/Correct_AnswerIdea_Sound_Effects.mp3");
+    snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
+  snd3 = loadSound("sound/Background.mp3");
     
      
     
@@ -46,6 +46,7 @@ function setup() {
   //  console.log(hell);
      mgr = new SceneManager();
      masterVolume(.05);
+      snd3.play();
 
 //     ghosty = createSprite(0, 0);
 //     ghosty.addAnimation("normal", "assets/ghost_spin0001.png",  "assets/ghost_spin0003.png");
