@@ -52,7 +52,7 @@ function scene_start()  {
            click1.onPress = function()
          {
 	
-             snd2.play();
+              snd2.jump(1, 0.5);
       mgr.showScene( scene_lvl1 );
   }   
       
@@ -78,7 +78,7 @@ function scene_start()  {
          click8.onPress = function()
          {
 	
-             snd2.play();
+              snd2.jump(1, 0.5);
       mgr.showScene( scene_help );
   }
 //         click1.onOutside = function(){
@@ -197,7 +197,7 @@ function scene_start()  {
        
   }  
          click7.onPress = function(){
-			 snd2.play();
+			 snd2.jump(1, 0.5);
 
              mgr.showScene( scene_start );
   }
@@ -314,7 +314,7 @@ function scene_start()  {
        
   }  
          click7.onPress = function(){
-			 snd2.play();
+			 snd2.jump(1, 0.5);
 
              mgr.showScene( scene_start );
   }
@@ -433,8 +433,7 @@ function scene_lvl3_1()  {
        
   }  
          click7.onPress = function(){
-			 snd2.play();
-
+		 snd2.jump(1, 0.5);
              mgr.showScene( scene_start );
   }
        
@@ -551,7 +550,7 @@ function scene_lvl4_1() {
        
   }  
          click7.onPress = function(){
-			 snd2.play();
+			 snd2.jump(1, 0.5);
 
              mgr.showScene( scene_start );
   }
@@ -595,7 +594,7 @@ function scene_lvl4_1() {
         this.color = "#FFFFFF";
   }
          click6.onPress = function(){
-		 snd2.jump(0.5, 1);
+		 snd2.jump(1, 0.5);
 
              mgr.showScene( scene_start );
   }
@@ -640,7 +639,7 @@ function scene_lvl4_1() {
         this.color = "#FFFFFF";
   }
          click7.onPress = function(){
-	 snd2.play();
+	 snd2.jump(1, 0.5);
              mgr.showScene( scene_start );
   }
   }
