@@ -128,7 +128,7 @@ function scene_start()  {
        
   }  
          click2.onPress = function(){
-	
+	 snd4.play();
              mgr.showScene( scene_lvl1_1 );
   }
         
@@ -267,7 +267,7 @@ function scene_start()  {
        
   }  
          click5.onPress = function(){
-	
+	 snd4.play();
             mgr.showScene( scene_lvl2_1 );
   }
       
@@ -385,7 +385,8 @@ function scene_lvl3()  {
        
   }  
          click10.onPress = function(){
-	
+		 snd4.play();
+
             mgr.showScene( scene_lvl3_1 );
   }
       
@@ -500,7 +501,8 @@ function scene_lvl4() {
        
   }  
          click12.onPress = function(){
-	
+		 snd4.play();
+
             mgr.showScene( scene_lvl4_1 );
   }
       
