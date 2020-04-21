@@ -371,7 +371,7 @@ function scene_lvl3()  {
           click10 = new Clickable();
          click10.locate(600, 600);
   click10.resize(250, 100);
-              click5.onHover = function(){
+              click10.onHover = function(){
 	 this.text = "Gas Station";
      this.textSize = 30;          
         this.color = "#FFFFFF";
