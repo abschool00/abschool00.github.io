@@ -52,7 +52,7 @@ function setup() {
     createCanvas(1080, 720);
   //  console.log(hell);
      mgr = new SceneManager();
-     masterVolume(.05);
+     masterVolume(1.0);
       snd3.loop();
 
 //     ghosty = createSprite(0, 0);
