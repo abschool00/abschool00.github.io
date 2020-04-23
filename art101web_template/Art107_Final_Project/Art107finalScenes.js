@@ -486,7 +486,7 @@ function scene_lvl4() {
          click11.onPress = function(){
 			 snd1.play();
 
-             mgr.showScene( scene_start );
+             mgr.showScene( scene_lvl5 );
   }
         
           click12 = new Clickable();
