@@ -934,7 +934,7 @@ function scene_lvl6_2() {
         this.color = "#FFFFFF";
   }
          click7.onPress = function(){
-	 snd6.jump(0.1, 3);
+	 snd6.jump(0, 3.5);
              mgr.showScene( scene_start );
   }
   }

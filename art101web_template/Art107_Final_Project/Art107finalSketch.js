@@ -53,7 +53,9 @@ function setup() {
   //  console.log(hell);
      mgr = new SceneManager();
      masterVolume(.05);
-      snd3.loop();
+      snd3.loop(){
+          setVolume(0.7);
+      }
 
 //     ghosty = createSprite(0, 0);
 //     ghosty.addAnimation("normal", "assets/ghost_spin0001.png",  "assets/ghost_spin0003.png");
