@@ -712,19 +712,19 @@ function scene_lvl6() {
   click15.resize(250, 100);
  click15.onHover = function(){
 	 this.text = "6 Rolls (truth)";
-     this.textSize = 15;          
+     this.textSize = 30;          
         this.color = "#FFFFFF";
   }
   
   click15.onOutside = function(){
 	 this.text = "6 Rolls (truth)";
-      this.textSize = 15;
+      this.textSize = 30;
         this.color = "#FFFFFF";
      
        
   }  
          click15.onPress = function(){
-			 snd4.play();
+			  snd2.jump(1, 0.5);
 
              mgr.showScene( scene_lvl6_1 );
   }
@@ -734,13 +734,13 @@ function scene_lvl6() {
   click16.resize(250, 100);
               click16.onHover = function(){
 	 this.text = "1 Roll (lie)";
-     this.textSize = 15;          
+     this.textSize = 30;          
         this.color = "#FFFFFF";
   }
   
   click16.onOutside = function(){
 	 this.text = "1 Roll (lie)";
-      this.textSize = 15;
+      this.textSize = 30;
         this.color = "#FFFFFF";
      
        
@@ -796,7 +796,7 @@ function scene_lvl6_1() {
        
   }  
          click17.onPress = function(){
-			 snd2.jump(1, 0.5);
+			snd4.play();
 
              mgr.showScene( scene_lvl6_2 );
   }
@@ -920,7 +920,7 @@ function scene_lvl6_2() {
  
   image(img6, 1,1,1080,720);
           click7 = new Clickable();
-          click7.locate(410, 480);
+          click7.locate(410, 600);
   click7.resize(250, 120);
      click7.onHover = function(){
 	 this.text = "Wake Up";
