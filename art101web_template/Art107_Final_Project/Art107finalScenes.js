@@ -18,6 +18,12 @@ var click9; //
 var click10; //
 var click11; //
 var click12; //
+var click13; //
+var click14; //
+var click15; //
+var click16; //
+var click17; //
+var click18; //
 
 // sprite1.collide(sprite2);
 // sprite1.overlap(sprite2);
@@ -466,13 +472,13 @@ function scene_lvl4() {
   click11.resize(250, 100);
  click11.onHover = function(){
 	 this.text = "Drug Store";
-     this.textSize = 20;          
+     this.textSize = 30;          
         this.color = "#FFFFFF";
   }
   
   click11.onOutside = function(){
 	 this.text = "Drug Store";
-      this.textSize = 20;
+      this.textSize = 30;
         this.color = "#FFFFFF";
      
        
@@ -573,6 +579,295 @@ function scene_lvl4_1() {
 
         
 }
+
+
+function scene_lvl5() {
+
+      this.setup = function() {
+          background(255);
+ 
+   image(img12, 1,1,1080,720);
+          click13 = new Clickable();
+            click13.locate(230, 600);
+  click13.resize(250, 100);
+ click13.onHover = function(){
+	 this.text = "Crystal";
+     this.textSize = 30;          
+        this.color = "#FFFFFF";
+  }
+  
+  click13.onOutside = function(){
+	 this.text = "Crystal";
+      this.textSize = 30;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click13.onPress = function(){
+			 snd4.play();
+
+             mgr.showScene( scene_lvl5_1 );
+  }
+        
+          click14 = new Clickable();
+         click14.locate(600, 600);
+  click14.resize(250, 100);
+              click12.onHover = function(){
+	 this.text = "Cough Medicine";
+     this.textSize = 30;          
+        this.color = "#FFFFFF";
+  }
+  
+  click14.onOutside = function(){
+	 this.text = "Cough Medicine";
+      this.textSize = 30;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click14.onPress = function(){
+		 snd1.play();
+
+            mgr.showScene( scene_lvl6 );
+  }
+      
+       
+  }
+     this.enter = function()
+  {
+           background(255);
+ 
+  image(img12, 1,1,1080,720);
+     }
+     this.draw = function()
+    {
+           background(255);
+ 
+  image(img12, 1,1,1080,720);
+          click13.draw();
+          click14.draw();
+      
+     }
+
+        
+}
+function scene_lvl5_1() {
+
+  
+    this.setup = function() {
+          background(255);
+ 
+  image(img13, 1,1,1080,720);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
+        
+        click7.onHover = function(){
+	 this.text = "Retry";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
+  }
+  
+  click7.onOutside = function(){
+	 this.text = "Retry";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click7.onPress = function(){
+			 snd2.jump(1, 0.5);
+
+             mgr.showScene( scene_start );
+  }
+       
+  }
+     this.enter = function(){
+
+           background(255);
+ 
+  image(img13, 1,1,1080,720);
+     }
+     this.draw = function()
+    {
+           background(255);
+ 
+  image(img13, 1,1,1080,720);
+          click7.draw();
+      
+     }
+
+        
+}
+
+
+function scene_lvl6() {
+
+      this.setup = function() {
+          background(255);
+ 
+   image(img14, 1,1,1080,720);
+          click15 = new Clickable();
+            click15.locate(230, 600);
+  click15.resize(250, 100);
+ click15.onHover = function(){
+	 this.text = "6 Rolls (truth)";
+     this.textSize = 15;          
+        this.color = "#FFFFFF";
+  }
+  
+  click15.onOutside = function(){
+	 this.text = "6 Rolls (truth)";
+      this.textSize = 15;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click15.onPress = function(){
+			 snd4.play();
+
+             mgr.showScene( scene_lvl6_1 );
+  }
+        
+          click16 = new Clickable();
+         click16.locate(600, 600);
+  click16.resize(250, 100);
+              click16.onHover = function(){
+	 this.text = "1 Roll (lie)";
+     this.textSize = 15;          
+        this.color = "#FFFFFF";
+  }
+  
+  click16.onOutside = function(){
+	 this.text = "1 Roll (lie)";
+      this.textSize = 15;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click16.onPress = function(){
+		 snd1.play();
+
+            mgr.showScene( scene_end );
+  }
+      
+       
+  }
+     this.enter = function()
+  {
+           background(255);
+ 
+  image(img14, 1,1,1080,720);
+     }
+     this.draw = function()
+    {
+           background(255);
+ 
+  image(img14, 1,1,1080,720);
+          click15.draw();
+          click16 .draw();
+      
+     }
+
+        
+}
+function scene_lvl6_1() {
+
+  
+    this.setup = function() {
+          background(255);
+ 
+  image(img15, 1,1,1080,720);
+          click17 = new Clickable();
+              click17.locate(600, 600);
+  click17.resize(250, 100);
+        
+        click17.onHover = function(){
+	 this.text = "Continue";
+     this.textSize = 50;          
+        this.color = "#FFFFFF";
+  }
+  
+  click17.onOutside = function(){
+	 this.text = "Continue";
+      this.textSize = 50;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click17.onPress = function(){
+			 snd2.jump(1, 0.5);
+
+             mgr.showScene( scene_lvl6_2 );
+  }
+       
+  }
+     this.enter = function(){
+
+           background(255);
+ 
+  image(img15, 1,1,1080,720);
+     }
+     this.draw = function()
+    {
+           background(255);
+ 
+  image(img15, 1,1,1080,720);
+          click17.draw();
+      
+     }
+
+        
+}
+
+function scene_lvl6_2() {
+
+  
+    this.setup = function() {
+          background(255);
+ 
+  image(img16, 1,1,1080,720);
+          click7 = new Clickable();
+              click7.locate(600, 600);
+  click7.resize(250, 100);
+        
+        click7.onHover = function(){
+	 this.text = "Retry";
+     this.textSize = 80;          
+        this.color = "#FFFFFF";
+  }
+  
+  click7.onOutside = function(){
+	 this.text = "Retry";
+      this.textSize = 80;
+        this.color = "#FFFFFF";
+     
+       
+  }  
+         click7.onPress = function(){
+			 snd2.jump(1, 0.5);
+
+             mgr.showScene( scene_start );
+  }
+       
+  }
+     this.enter = function(){
+
+           background(255);
+ 
+  image(img16, 1,1,1080,720);
+     }
+     this.draw = function()
+    {
+           background(255);
+ 
+  image(img16, 1,1,1080,720);
+          click7.draw();
+      
+     }
+
+        
+}
         function scene_help()  {
 
    this.setup = function() {
@@ -628,13 +923,13 @@ function scene_lvl4_1() {
           click7.locate(410, 480);
   click7.resize(250, 120);
      click7.onHover = function(){
-	 this.text = "Play Again";
+	 this.text = "Wake Up";
      this.textSize = 40;          
         this.color = "#FFFFFF";
   }
   
   click7.onOutside = function(){
-	 this.text = "Play Again";
+	 this.text = "Wake Up";
       this.textSize = 40;
         this.color = "#FFFFFF";
   }

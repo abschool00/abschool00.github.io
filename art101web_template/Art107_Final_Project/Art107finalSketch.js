@@ -23,12 +23,17 @@ function preload() {
     img3 = loadImage('assets/Quarantine_Run_Screen_Lvl1_1.png');
     img4 = loadImage('assets/Quarantine_Run_Screen_Lvl2.png');
     img5 = loadImage('assets/Quarantine_Run_Screen_Lvl2_1.png');
-    img6 = loadImage('assets/EndScene.png');
+    img6 = loadImage('assets/Quarantine_Run_End.png');
     img7 = loadImage('assets/Quarantine_Run_Help_Screen.png');
     img8 = loadImage('assets/Quarantine_Run_Screen_Lvl3.png');
     img9 = loadImage('assets/Quarantine_Run_Screen_Lvl3_1.png');
     img10 = loadImage('assets/Quarantine_Run_Screen_Lvl4.png');
     img11 = loadImage('assets/Quarantine_Run_Screen_Lvl4_1.png');
+    img12 = loadImage('assets/Quarantine_Run_Screen_Lvl5.png');
+    img13 = loadImage('assets/Quarantine_Run_Screen_Lvl5_1.png');
+    img14 = loadImage('assets/Quarantine_Run_Screen_Lvl6.png');
+    img15 = loadImage('assets/Quarantine_Run_Screen_Lvl6_1.png');
+    img16 = loadImage('assets/Quarantine_Run_Screen_Lvl6_2.png');
 
 
 }
@@ -63,6 +68,11 @@ function setup() {
     mgr.addScene (scene_lvl3_1);
     mgr.addScene (scene_lvl4);
     mgr.addScene (scene_lvl4_1);
+     mgr.addScene (scene_lvl5);
+    mgr.addScene (scene_lvl5_1);
+     mgr.addScene (scene_lvl6);
+    mgr.addScene (scene_lvl6_1);
+     mgr.addScene (scene_lvl6_2);
     mgr.addScene (scene_help);
     mgr.addScene (scene_end);
     mgr.showNextScene();
@@ -93,26 +103,24 @@ function keyPressed()
     switch(key)
     {
         case '1':
-            mgr.showScene( scene_start );
-            break;
-        case '2':
             mgr.showScene( scene_lvl1 );
             break;
-        case '3':
+        case '2':
             mgr.showScene( scene_lvl2 );
             break;
-        case '4':
+        case '3':
             mgr.showScene( scene_lvl3 );
             break;
-        case '5':
+        case '4':
             mgr.showScene( scene_lvl4 );
             break;
+        case '5':
+            mgr.showScene( scene_lvl5 );
+            break;
         case '6':
-            mgr.showScene( scene_help );
+            mgr.showScene( scene_lvl6 );
             break;
-        case '7':
-            mgr.showScene( scene_end );
-            break;
+     
     }
 
     // ... then dispatch via the SceneManager.
