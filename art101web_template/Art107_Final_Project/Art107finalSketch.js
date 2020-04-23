@@ -54,7 +54,7 @@ function setup() {
      mgr = new SceneManager();
      masterVolume(.05);
       snd3.loop(){
-          setVolume(0.7);
+          setVolume(1.5);
       }
 
 //     ghosty = createSprite(0, 0);
