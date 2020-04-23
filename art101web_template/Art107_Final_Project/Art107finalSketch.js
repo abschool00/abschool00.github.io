@@ -15,6 +15,8 @@ function preload() {
     snd2 = loadSound("sound/Mouse_Click_-_Sound_Effect_HD.mp3");
   snd3 = loadSound("sound/Background.mp3");
       snd4 = loadSound("sound/Death.mp3");
+    snd5 = loadSound("sound/Victory.mp3");
+    snd6 = loadSound("sound/Alarm.mp3");
      
     
     
