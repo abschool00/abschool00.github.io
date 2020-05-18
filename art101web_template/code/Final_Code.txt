@@ -1,0 +1,135 @@
+
+#include <Wire.h>
+#include <SPI.h>
+#include <Adafruit_BMP280.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+/**********************************************************/
+LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
+
+
+
+#define BMP_SCK  (13)
+#define BMP_MISO (12)
+#define BMP_MOSI (11)
+#define BMP_CS   (10)
+
+
+//Adafruit_BMP280 bmp; // I2C
+Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
+//Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println(F("Data Input"));
+
+
+  lcd.init();  //initialize the lcd
+   lcd.backlight();//open the backlight
+  
+
+  if (!bmp.begin()) {
+    Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
+    while (1);
+  }
+
+  /* Default settings from datasheet. */
+  bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
+                  Adafruit_BMP280::SAMPLING_X2,     /* Temp. oversampling */
+                  Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
+                  Adafruit_BMP280::FILTER_X16,      /* Filtering. */
+                  Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
+}
+
+void loop() {
+  int button = analogRead(A1);
+
+//Screen
+   if (button >= 100){
+ lcd.display();
+ delay(10);
+
+ lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("Everything is Ok");  // Print a message to the LCD
+  
+  lcd.setCursor(0, 1); // set the cursor to column 2, line 1
+  lcd.print((bmp.readTemperature()*9/5) + 32 );  // Print a message to the LCD.
+   lcd.setCursor(4, 1);
+  lcd.print("F" );
+
+
+   lcd.setCursor(13, 1); // set the cursor to column 2, line 1
+  lcd.print(analogRead(A0)/0.1);  // Print a message to the LCD.
+   lcd.setCursor(14, 1);
+  lcd.print("UV" );
+
+
+    lcd.setCursor(6, 1); // set the cursor to column 2, line 1
+  lcd.print(bmp.readPressure()/100000);  // Print a message to the LCD.
+   lcd.setCursor(10, 1);
+  lcd.print("AT" );
+  
+  }
+
+  else if (button <= 90){
+     lcd.noDisplay();
+     delay(10);
+  }
+
+
+
+  
+       if ((analogRead(A0)/0.1) >= 5) {
+   lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("You are not Okay");  // Print a message to the LCD
+}
+   else if ((bmp.readTemperature()*9/5) + 32 >= 100) {
+   lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("You are not Okay");  // Print a message to the LCD
+}
+else if ((bmp.readTemperature()*9/5) + 32 <= 30) {
+   lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("You are not Okay");  // Print a message to the LCD
+}
+else if ((bmp.readPressure()/100000 >= 1.8) {
+   lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("You are not Okay");  // Print a message to the LCD
+}
+else if ((bmp.readPressure()/100000 <= 0.2) {
+   lcd.setCursor(0, 0); // set the cursor to column 3, line 0
+  lcd.print("You are not Okay");  // Print a message to the LCD
+}
+
+  //UV sensor
+
+   
+   int sensorValue = analogRead(A0);
+   float voltage = sensorValue/0.1;
+
+
+   //Button
+
+
+  
+  //BMP Sensor
+    Serial.print(F("Temperature = "));
+    Serial.print((bmp.readTemperature()*9/5) + 32 );
+    Serial.println(" *F");
+
+    Serial.print(F("Pressure = "));
+    Serial.print(bmp.readPressure()/100000);
+    Serial.println(" Atm");
+
+    Serial.print(F("Approx altitude = "));
+    Serial.print(bmp.readAltitude(1015)*3.281); /* Adjusted to local forecast! */
+    Serial.println(" ft");
+
+    Serial.print("UV index = ");
+    Serial.println(voltage);
+
+    Serial.println(button);
+   
+
+    Serial.println();
+    delay(2000);
+}
